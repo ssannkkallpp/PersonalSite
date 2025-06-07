@@ -9,13 +9,10 @@ const ExperiencePage = () => {
       duration: '2022 - Present',
       location: 'Remote',
       description: [
-        'Architected and developed next-gen cybersecurity solutions for enterprise clients',
-        'Implemented zero-trust security frameworks and micro-segmentation technologies',
-        'Built scalable microservices handling 10M+ security events daily',
-        'Optimized threat detection algorithms resulting in 40% faster response times'
+        'Led the development of a feature to detect sensitive cloud access keys, credentials, and secrets using YARA and Go, resulting in a 10% increase in reported security flaws. Optimized performance to minimize additional overhead.',
+        'Designed, implemented and managed a secure APT package repository and pipeline hosted on Azure, utilizing containerization and GPG key encryption. This solution streamlined Debian package distribution and ensured secure updates and patches of binaries on the XShield agentless platform, demonstrating proficiency in cloud-based data storage solutions, data security, and system optimization'
       ],
-      technologies: ['Python', 'Java', 'React', 'Docker', 'Kubernetes', 'AWS', 'Redis'],
-      achievements: ['40% performance improvement', '99.9% uptime', 'Zero security incidents'],
+      technologies: ['Golang', 'Python', 'Azure DevOps', 'Kubernetes', 'AWS', 'Redis', 'YARA'],
       color: 'from-purple-500 to-pink-600'
     },
     {
@@ -24,13 +21,10 @@ const ExperiencePage = () => {
       duration: '2021 - 2022',
       location: 'Charlotte, NC',
       description: [
-        'Developed critical financial applications serving 66M+ customers globally',
-        'Built automated testing frameworks reducing deployment time by 60%',
-        'Optimized high-frequency trading systems with microsecond latency requirements',
-        'Led code reviews and mentored 5+ junior developers'
+        'Developed an internal templating engine for Quartz entirely in Python, including a user-friendly UI, streamlining workflows and boosting productivity.',
+        'Thrived in a collaborative team environment, contributing to a versatile set of tickets that required cross-functional coordination and teamwork. Actively engaged in brainstorming sessions, shared insights and data-driven strategies, and provided constructive feedback to the team.'
       ],
-      technologies: ['Java', 'Spring Boot', 'Oracle DB', 'Jenkins', 'Git', 'Kafka'],
-      achievements: ['60% faster deployments', '$2M+ cost savings', '5 developers mentored'],
+      technologies: ['Python'],
       color: 'from-cyan-500 to-blue-600'
     }
   ];
@@ -99,59 +93,23 @@ const ExperiencePage = () => {
                     </ul>
                   </div>
 
-                  {/* Achievements */}
+                  {/* Technologies */}
                   <div>
-                    <h4 className="text-gray-900 font-semibold mb-3 flex items-center">
-                      <Zap className="h-4 w-4 mr-2 text-blue-600" />
-                      Key Achievements
-                    </h4>
-                    <div className="space-y-2">
-                      {exp.achievements.map((achievement, idx) => (
-                        <div key={idx} className="bg-blue-50 border border-blue-200 rounded-lg p-3">
-                          <span className="text-blue-700 text-sm font-medium">{achievement}</span>
-                        </div>
+                    <h4 className="text-gray-900 font-semibold mb-3">Technologies Used</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {exp.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-3 py-1 bg-white border border-gray-300 text-gray-700 text-sm font-medium rounded-full hover:border-blue-400 hover:text-blue-600 transition-colors duration-200"
+                        >
+                          {tech}
+                        </span>
                       ))}
                     </div>
                   </div>
                 </div>
-
-                {/* Technologies */}
-                <div>
-                  <h4 className="text-gray-900 font-semibold mb-3">Technologies Used</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {exp.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-white border border-gray-300 text-gray-700 text-sm font-medium rounded-full hover:border-blue-400 hover:text-blue-600 transition-colors duration-200"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
               </div>
             ))}
-          </div>
-
-          {/* Career Summary */}
-          <div className="mt-16 text-center">
-            <div className="bg-blue-50 border border-blue-200 rounded-2xl p-8 max-w-4xl mx-auto">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Career Highlights</h2>
-              <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div>
-                  <div className="text-3xl font-bold text-blue-600 mb-2">3+</div>
-                  <div className="text-gray-700">Years Experience</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-blue-600 mb-2">66M+</div>
-                  <div className="text-gray-700">Users Served</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-blue-600 mb-2">10M+</div>
-                  <div className="text-gray-700">Events Processed Daily</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
