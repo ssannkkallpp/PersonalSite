@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, User, Mail, Code, Briefcase, Home } from 'lucide-react';
+import { Menu, X, User, Mail, Code, Briefcase, Home, FolderGit2 } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
@@ -27,6 +27,7 @@ const Header = () => {
     { icon: Home, label: 'Home', path: '/' },
     { icon: User, label: 'About', path: '/about' },
     { icon: Briefcase, label: 'Experience', path: '/experience' },
+    { icon: FolderGit2, label: 'Projects', path: '/projects' },
     { icon: Mail, label: 'Contact', action: () => scrollToSection('contact') }
   ];
 
