@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, Calendar, MapPin, ExternalLink, Code, Zap } from 'lucide-react';
+import { Building2, Calendar, MapPin, ExternalLink, Code } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
@@ -9,13 +9,10 @@ const Experience = () => {
       duration: '2022 - Present',
       location: 'Remote',
       description: [
-        'Architected and developed next-gen cybersecurity solutions for enterprise clients',
-        'Implemented zero-trust security frameworks and micro-segmentation technologies',
-        'Built scalable microservices handling 10M+ security events daily',
-        'Optimized threat detection algorithms resulting in 40% faster response times'
+        'Led the development of a feature to detect sensitive cloud access keys, credentials, and secrets using YARA and Go, resulting in a 10% increase in reported security flaws. Optimized performance to minimize additional overhead.',
+        'Designed, implemented and managed a secure APT package repository and pipeline hosted on Azure, utilizing containerization and GPG key encryption. This solution streamlined Debian package distribution and ensured secure updates and patches of binaries on the XShield agentless platform, demonstrating proficiency in cloud-based data storage solutions, data security, and system optimization'
       ],
-      technologies: ['Python', 'Java', 'React', 'Docker', 'Kubernetes', 'AWS', 'Redis'],
-      achievements: ['40% performance improvement', '99.9% uptime', 'Zero security incidents'],
+      technologies: ['Golang', 'Python', 'Azure DevOps', 'Kubernetes', 'AWS', 'Redis', 'YARA'],
       color: 'from-purple-500 to-pink-600'
     },
     {
@@ -24,13 +21,10 @@ const Experience = () => {
       duration: '2021 - 2022',
       location: 'Charlotte, NC',
       description: [
-        'Developed critical financial applications serving 66M+ customers globally',
-        'Built automated testing frameworks reducing deployment time by 60%',
-        'Optimized high-frequency trading systems with microsecond latency requirements',
-        'Led code reviews and mentored 5+ junior developers'
+        'Developed an internal templating engine for Quartz entirely in Python, including a user-friendly UI, streamlining workflows and boosting productivity.',
+        'Thrived in a collaborative team environment, contributing to a versatile set of tickets that required cross-functional coordination and teamwork. Actively engaged in brainstorming sessions, shared insights and data-driven strategies, and provided constructive feedback to the team.'
       ],
-      technologies: ['Java', 'Spring Boot', 'Oracle DB', 'Jenkins', 'Git', 'Kafka'],
-      achievements: ['60% faster deployments', '$2M+ cost savings', '5 developers mentored'],
+      technologies: ['Python'],
       color: 'from-cyan-500 to-blue-600'
     }
   ];
@@ -81,9 +75,9 @@ const Experience = () => {
                 </div>
               </div>
 
-              <div className="grid lg:grid-cols-3 gap-6 mb-6">
+              <div className="mb-6">
                 {/* Description */}
-                <div className="lg:col-span-2">
+                <div>
                   <h5 className="text-white font-semibold mb-3 flex items-center">
                     <Code className="h-4 w-4 mr-2 text-cyan-400" />
                     Key Responsibilities
@@ -96,21 +90,6 @@ const Experience = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
-
-                {/* Achievements */}
-                <div>
-                  <h5 className="text-white font-semibold mb-3 flex items-center">
-                    <Zap className="h-4 w-4 mr-2 text-purple-400" />
-                    Key Achievements
-                  </h5>
-                  <div className="space-y-2">
-                    {exp.achievements.map((achievement, idx) => (
-                      <div key={idx} className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-400/20 rounded-lg p-3">
-                        <span className="text-cyan-300 text-sm font-medium">{achievement}</span>
-                      </div>
-                    ))}
-                  </div>
                 </div>
               </div>
 
