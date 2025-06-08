@@ -9,6 +9,19 @@ const Hero = () => {
     }
   };
 
+  const handleDownload = () => {
+    // Create a link element
+    const link = document.createElement('a');
+    // Set the path to your PDF file in the public folder
+    link.href = '/resume.pdf';
+    // Set the download attribute to force download
+    link.download = 'Sankalp_Ramesh_Resume.pdf';
+    // Append to body, click, and remove
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-blue-50 overflow-hidden">
       {/* Subtle Background Elements */}
@@ -64,7 +77,10 @@ const Hero = () => {
                 <span>Learn More About Me</span>
               </button>
               
-              <button className="inline-flex items-center justify-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-300">
+              <button 
+                onClick={handleDownload}
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-300"
+              >
                 <Download className="mr-2 h-5 w-5" />
                 <span>Download Resume</span>
               </button>
