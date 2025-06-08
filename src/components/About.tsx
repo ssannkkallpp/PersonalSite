@@ -49,8 +49,7 @@ const About = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            A dedicated software engineer with a passion for creating innovative solutions 
-            that make a meaningful impact in the technology landscape.
+            Software Engineer with a passion for NBA storytelling.
           </p>
         </div>
 
@@ -65,19 +64,13 @@ const About = () => {
               
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  I believe that great software isn't just functional—it's intuitive, reliable, 
-                  and makes people's lives better. My journey in computer science began with 
-                  curiosity about how technology could solve real-world problems.
+                  I graduated from UMass Amherst in 2022 with a degree in Computer Science. I've since spent three years working 
+                  in the microsegmentation space developing the XShield platform at ColorTokens Inc providing security features for OT and Cloud workloads. 
                 </p>
                 <p>
-                  With experience at leading companies like Bank of America and ColorTokens, I've learned 
-                  that the most impactful solutions come from understanding both the technical possibilities 
-                  and the human needs behind every project.
-                </p>
-                <p>
-                  Today, I focus on building robust, scalable applications that bridge the gap between 
-                  cutting-edge technology and practical business solutions, always with an eye 
-                  for quality, performance, and user experience.
+                  Currently, I'm at New York University pursuing a Master's in Computer Science with a focus on building scalable systems with modern AI engineering techniques. Outside of work,
+                  I'm a huge fan of the NBA and the Los Angeles Lakers. As a shameless consumer of modern sports media, I have recently taken a strong passion for 
+                  sports storytelling and the art of storytelling in general. I will be posting some of my thoughts on the modern NBA and the evolution of the league through the years. 
                 </p>
               </div>
             </div>
