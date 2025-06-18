@@ -4,6 +4,13 @@ import { ExternalLink } from 'lucide-react';
 const ProjectsPage = () => {
   const projects = [
     {
+      title: 'Chase Game',
+      description: 'An engaging web-based game that challenges players to navigate through various levels while avoiding obstacles and collecting rewards.',
+      image: '/chase-home.png',
+      liveLink: '#',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
       title: 'COVID-19 Visualizer',
       description: 'A website that visualizes the spread of COVID-19 in a given area. It uses a simulation to model the spread of the virus and displays the results in a visual format. It also allows you to see the number of cases in a given area over time.',
       image: '/covid-site-picture.png', // You'll need to add this image to your public folder
@@ -14,7 +21,7 @@ const ProjectsPage = () => {
       title: 'EULEX',
       description: 'A website to help non-native English speakers learn to read in English. It uses a combination of the syllable method and the sight word method to help users learn to read.',
       image: '/Eulex-pic.png', // You'll need to add this image to your public folder
-      liveLink: 'https://ssannkkallpp.github.io/eulex/vMask.html',
+      liveLink: 'https://chase-game-self.vercel.app/',
       color: 'from-purple-500 to-pink-500'
     }
   ];
