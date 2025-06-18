@@ -5,7 +5,7 @@ const ProjectsPage = () => {
   const projects = [
     {
       title: 'Chase Game',
-      description: 'An engaging web-based game that challenges players to navigate through various levels while avoiding obstacles and collecting rewards.',
+      description: 'A web-based game to traverse a grid while avoiding an adversarial red dot.',
       image: '/chase-home.png',
       liveLink: 'https://chase-game-self.vercel.app/',
       color: 'from-green-500 to-emerald-500'
