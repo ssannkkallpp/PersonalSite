@@ -7,7 +7,7 @@ const ProjectsPage = () => {
       title: 'Chase Game',
       description: 'An engaging web-based game that challenges players to navigate through various levels while avoiding obstacles and collecting rewards.',
       image: '/chase-home.png',
-      liveLink: '#',
+      liveLink: 'https://chase-game-self.vercel.app/',
       color: 'from-green-500 to-emerald-500'
     },
     {
@@ -21,7 +21,7 @@ const ProjectsPage = () => {
       title: 'EULEX',
       description: 'A website to help non-native English speakers learn to read in English. It uses a combination of the syllable method and the sight word method to help users learn to read.',
       image: '/Eulex-pic.png', // You'll need to add this image to your public folder
-      liveLink: 'https://chase-game-self.vercel.app/',
+      liveLink: 'https://ssannkkallpp.github.io/eulex/vMask.html',
       color: 'from-purple-500 to-pink-500'
     }
   ];
