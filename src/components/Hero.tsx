@@ -34,34 +34,25 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div className="text-gray-800 order-2 lg:order-1">
-            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-50 border border-blue-200 rounded-full text-blue-700 text-sm font-medium mb-6">
-              <User className="h-4 w-4" />
-              <span>Software Engineer</span>
-            </div>
-            
-            <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-              <span className="block text-gray-900">Hello, I'm</span>
+          <div className="text-gray-900 order-2 lg:order-1">  
+            <h1 className="text-6xl lg:text-7xl font-bold mb-8 leading-tight text-gray-900">
+              <span className="block">Hello, I'm</span>
               <span className="block text-blue-600">
                 Sankalp Ramesh
               </span>
             </h1>
             
-            <h2 className="text-2xl lg:text-3xl font-light mb-6 text-gray-700">
-              Computer Scientist & Software Engineer
-            </h2>
-            
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-lg">
+            <p className="text-xl text-gray-900 mb-10 leading-relaxed max-w-2xl font-normal">
               Passionate about building innovative software solutions with 3 years of experience 
               at leading companies including Bank of America and ColorTokens.
             </p>
 
             {/* Experience Highlights */}
-            <div className="flex flex-wrap gap-3 mb-8">
+            <div className="flex flex-wrap gap-4 mb-10">
               {['3+ Years Experience', 'Full-Stack Development', 'Enterprise Solutions', 'Team Leadership'].map((highlight, index) => (
                 <span
                   key={highlight}
-                  className="px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 shadow-sm"
+                  className="px-6 py-3 bg-white border border-gray-200 rounded-full text-lg font-medium text-gray-900 shadow-md"
                 >
                   {highlight}
                 </span>
@@ -69,25 +60,18 @@ const Hero = () => {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <button
-                onClick={scrollToAbout}
-                className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-lg"
-              >
-                <span>Learn More About Me</span>
-              </button>
-              
+            <div className="flex flex-col sm:flex-row gap-6 mb-10">
               <button 
                 onClick={handleDownload}
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-all duration-300"
+                className="inline-flex items-center justify-center px-10 py-5 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-lg"
               >
-                <Download className="mr-2 h-5 w-5" />
+                <Download className="mr-3 h-6 w-6" />
                 <span>Download Resume</span>
               </button>
             </div>
 
             {/* Social Links */}
-            <div className="flex space-x-4">
+            <div className="flex space-x-6">
               {[
                 { icon: Github, href: '#', label: 'GitHub' },
                 { icon: Linkedin, href: '#', label: 'LinkedIn' },
@@ -96,10 +80,10 @@ const Hero = () => {
                 <a
                   key={label}
                   href={href}
-                  className="p-3 bg-white border border-gray-200 rounded-lg transition-all duration-300 hover:shadow-md hover:border-blue-300 group"
+                  className="p-4 bg-white border border-gray-200 rounded-lg transition-all duration-300 hover:shadow-lg hover:border-blue-300 group"
                   aria-label={label}
                 >
-                  <Icon className="h-6 w-6 text-gray-600 group-hover:text-blue-600" />
+                  <Icon className="h-8 w-8 text-gray-700 group-hover:text-blue-600" />
                 </a>
               ))}
             </div>
@@ -130,14 +114,6 @@ const Hero = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <button onClick={scrollToAbout} className="flex flex-col items-center space-y-2 text-blue-600 hover:text-blue-700 transition-colors">
-          <span className="text-sm font-medium">Learn more</span>
-          <ArrowDown className="h-6 w-6 animate-bounce" />
-        </button>
       </div>
     </section>
   );

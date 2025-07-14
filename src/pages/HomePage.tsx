@@ -1,12 +1,12 @@
 import React from 'react';
 import Hero from '../components/Hero';
-import Contact from '../components/Contact';
+// import Contact from '../components/Contact';
 
 const HomePage = () => {
   return (
     <div>
       <Hero />
-      <Contact />
+      {/* <Contact /> */}
     </div>
   );
 };
