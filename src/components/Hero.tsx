@@ -12,20 +12,20 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gray-100 px-4 sm:px-6 lg:px-8">
+    <section 
+      className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative"
+      style={{
+        backgroundImage: 'url(/image.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      
       <div className="w-full max-w-4xl mx-auto text-center">
-        <div className="bg-white border-2 border-black p-8 sm:p-12 lg:p-16">
-          {/* Profile Image */}
-          <div className="mb-8">
-            <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto border-2 border-black overflow-hidden">
-              <img
-                src="/image.png"
-                alt="Sankalp Ramesh"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-
+        <div className="bg-white border-2 border-black p-8 sm:p-12 lg:p-16 relative z-10">
           {/* Content */}
           <div className="space-y-6">
             <div className="bg-black text-white px-4 py-2 inline-block text-sm font-mono uppercase tracking-wider">
