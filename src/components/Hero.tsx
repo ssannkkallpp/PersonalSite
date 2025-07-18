@@ -44,8 +44,8 @@ const Hero = () => {
               {/* Social Links */}
               <div className="flex justify-center sm:justify-start space-x-6 pt-6">
                 {[
-                  { icon: Github, href: '#', label: 'GitHub' },
-                  { icon: Linkedin, href: '#', label: 'LinkedIn' },
+                  { icon: Github, href: 'https://github.com/ssannkkallpp', label: 'GitHub' },
+                  { icon: Linkedin, href: 'https://www.linkedin.com/in/sramesh1223/', label: 'LinkedIn' },
                   { icon: Mail, href: '#contact', label: 'Email' }
                 ].map(({ icon: Icon, href, label }) => (
                   <a
