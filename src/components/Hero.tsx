@@ -40,25 +40,6 @@ const Hero = () => {
               Building software solutions with 3+ years experience at Bank of America and ColorTokens.
             </p>
 
-            {/* Simple stats */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-lg mx-auto">
-              <div className="border border-black p-3">
-                <div className="text-2xl font-bold font-mono">3+</div>
-                <div className="text-xs font-mono uppercase">Years</div>
-              </div>
-              <div className="border border-black p-3">
-                <div className="text-2xl font-bold font-mono">2</div>
-                <div className="text-xs font-mono uppercase">Companies</div>
-              </div>
-              <div className="border border-black p-3">
-                <div className="text-2xl font-bold font-mono">∞</div>
-                <div className="text-xs font-mono uppercase">Projects</div>
-              </div>
-              <div className="border border-black p-3">
-                <div className="text-2xl font-bold font-mono">1</div>
-                <div className="text-xs font-mono uppercase">Passion</div>
-              </div>
-            </div>
 
             {/* Action Button */}
             <div className="pt-4">
