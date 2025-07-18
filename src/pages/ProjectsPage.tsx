@@ -26,7 +26,13 @@ const ProjectsPage = () => {
     <div className="pt-20 min-h-screen bg-gray-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
+          <div className="bg-black text-white px-4 py-2 inline-block mb-6 font-mono text-sm uppercase tracking-wider">
+            Portfolio
+          </div>
           <h1 className="text-3xl sm:text-4xl font-bold font-mono mb-6">FEATURED PROJECTS</h1>
+          <p className="text-lg font-mono max-w-2xl mx-auto">
+            Selected work demonstrating technical skills and problem-solving approach.
+          </p>
         </div>
 
         <div className="grid gap-8">
