@@ -26,13 +26,7 @@ const ProjectsPage = () => {
     <div className="pt-20 min-h-screen bg-gray-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
-          <div className="bg-black text-white px-4 py-2 inline-block mb-6 font-mono text-sm uppercase tracking-wider">
-            Portfolio
-          </div>
           <h1 className="text-3xl sm:text-4xl font-bold font-mono mb-6">FEATURED PROJECTS</h1>
-          <p className="text-lg font-mono max-w-2xl mx-auto">
-            Selected work demonstrating technical skills and problem-solving approach.
-          </p>
         </div>
 
         <div className="grid gap-8">
@@ -55,9 +49,6 @@ const ProjectsPage = () => {
 
                 {/* Project Content */}
                 <div className="lg:w-1/2 p-6 sm:p-8">
-                  <div className="bg-black text-white px-3 py-1 inline-block mb-4 font-mono text-xs uppercase tracking-wider">
-                    Project {String(index + 1).padStart(2, '0')}
-                  </div>
                   <h2 className="text-2xl lg:text-3xl font-bold font-mono mb-4 uppercase">{project.title}</h2>
                   <p className="text-base font-mono mb-6 leading-relaxed">{project.description}</p>
 
