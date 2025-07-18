@@ -23,7 +23,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-blue-50 overflow-hidden px-4 sm:px-6 lg:px-8">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-blue-50 overflow-hidden px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24">
       {/* Subtle Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-4 sm:left-20 w-16 h-16 sm:w-32 sm:h-32 bg-blue-100 rounded-full opacity-30"></div>
@@ -95,7 +95,7 @@ const Hero = () => {
           </div>
 
           {/* Profile Section */}
-          <div className="relative order-1 lg:order-2 flex justify-center lg:justify-end">
+          <div className="relative order-1 lg:order-2 flex justify-center lg:justify-end mt-8 lg:mt-0">
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 mx-auto">
               {/* Simple frame */}
               <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full"></div>
