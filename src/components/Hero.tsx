@@ -15,34 +15,34 @@ const Hero = () => {
     <section className="min-h-screen flex">
       {/* Left Half - Text Content */}
       <div className="w-1/2 flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gray-100">
-        <div className="w-full max-w-lg">
-          <div className="bg-white border-2 border-black p-8 sm:p-12">
+        <div className="w-full max-w-2xl">
+          <div className="bg-white border-2 border-black p-10 sm:p-14 lg:p-16">
             {/* Content */}
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div className="bg-black text-white px-4 py-2 inline-block text-sm font-mono uppercase tracking-wider">
                 Software Engineer
               </div>
               
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black font-mono">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black font-mono">
                 SANKALP RAMESH
               </h1>
               
-              <p className="text-base sm:text-lg text-black font-mono leading-relaxed">
+              <p className="text-lg sm:text-xl text-black font-mono leading-relaxed">
                 Building software solutions with 3+ years experience at Bank of America and ColorTokens.
               </p>
 
               {/* Action Button */}
-              <div className="pt-4">
+              <div className="pt-6">
                 <button 
                   onClick={handleDownload}
-                  className="bg-black text-white px-6 py-3 border-2 border-black hover:bg-white hover:text-black transition-colors duration-200 font-mono uppercase tracking-wider text-sm w-full sm:w-auto"
+                  className="bg-black text-white px-8 py-4 border-2 border-black hover:bg-white hover:text-black transition-colors duration-200 font-mono uppercase tracking-wider text-base w-full sm:w-auto"
                 >
                   Download Resume
                 </button>
               </div>
 
               {/* Social Links */}
-              <div className="flex justify-center sm:justify-start space-x-4 pt-4">
+              <div className="flex justify-center sm:justify-start space-x-6 pt-6">
                 {[
                   { icon: Github, href: '#', label: 'GitHub' },
                   { icon: Linkedin, href: '#', label: 'LinkedIn' },
@@ -51,10 +51,10 @@ const Hero = () => {
                   <a
                     key={label}
                     href={href}
-                    className="p-2 border border-black hover:bg-black hover:text-white transition-colors duration-200"
+                    className="p-3 border border-black hover:bg-black hover:text-white transition-colors duration-200"
                     aria-label={label}
                   >
-                    <Icon className="h-5 w-5" />
+                    <Icon className="h-6 w-6" />
                   </a>
                 ))}
               </div>
