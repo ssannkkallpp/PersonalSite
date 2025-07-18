@@ -11,12 +11,12 @@ const Hero = () => {
     document.body.removeChild(link);
   };
 
-  return (
-    <section className="min-h-screen flex">
-      {/* Left Half - Text Content */}
-      <div className="w-1/2 flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gray-100">
-        <div className="w-full max-w-2xl">
-          <div className="bg-white border-2 border-black p-10 sm:p-14 lg:p-16">
+      return (
+      <section className="min-h-screen flex">
+        {/* Left Half - Text Content */}
+        <div className="w-1/2 flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gray-100">
+          <div className="w-full max-w-2xl">
+            <div className="bg-white border-2 border-black p-10 sm:p-14 lg:p-16 animate-slide-up">
             {/* Content */}
             <div className="space-y-8">
               <div className="bg-black text-white px-4 py-2 inline-block text-sm font-mono uppercase tracking-wider">
@@ -63,16 +63,16 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Right Half - Image */}
-      <div 
-        className="w-1/2 min-h-screen bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'url(/image.png)'
-        }}
-      >
-        {/* Optional overlay for better visual separation */}
-        <div className="w-full h-full bg-black bg-opacity-10"></div>
-      </div>
+              {/* Right Half - Image */}
+        <div 
+          className="w-1/2 min-h-screen bg-cover bg-center bg-no-repeat animate-slide-down"
+          style={{
+            backgroundImage: 'url(/image.png)'
+          }}
+        >
+          {/* Optional overlay for better visual separation */}
+          <div className="w-full h-full bg-black bg-opacity-10"></div>
+        </div>
     </section>
   );
 };
