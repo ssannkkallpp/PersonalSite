@@ -1,27 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, User, Mail, Code, Briefcase, Home, FolderGit2 } from 'lucide-react';
+import { Menu, X, Home, User, FolderGit2 } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
-  };
 
   const navigationItems = [
     { icon: Home, label: 'Home', path: '/' },
@@ -30,23 +13,25 @@ const Header = () => {
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200' 
-        : 'bg-white/80 backdrop-blur-sm'
-    }`}>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b-2 border-black">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-3">
+          {/* Logo */}
+          <Link to="/" className="font-mono font-bold text-lg">SR</Link>
+          
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-8 ml-auto">
+          <div className="hidden md:flex items-center space-x-1">
             {navigationItems.map((item) => (
               <Link
                 key={item.label}
                 to={item.path}
-                className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-blue-50`}
+                className={`px-4 py-2 border border-black font-mono text-sm uppercase tracking-wider transition-colors duration-200 ${
+                  location.pathname === item.path 
+                    ? 'bg-black text-white' 
+                    : 'bg-white text-black hover:bg-black hover:text-white'
+                }`}
               >
-                <item.icon className="h-5 w-5" />
-                <span>{item.label}</span>
+                {item.label}
               </Link>
             ))}
           </div>
@@ -54,31 +39,29 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-3 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+            className="md:hidden p-2 border border-black hover:bg-black hover:text-white transition-colors duration-200"
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white rounded-lg shadow-lg mb-4 p-4 border border-gray-200 animate-in slide-in-from-top-2">
-            {navigationItems.map(({ icon: Icon, label, path }) => {
-              
+          <div className="md:hidden bg-white border-t border-black">
+            {navigationItems.map(({ label, path }) => {
               return (
                 <Link
                   key={label}
                   to={path!}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`flex items-center space-x-3 w-full px-4 py-4 rounded-lg transition-colors font-medium ${
+                  className={`block w-full px-4 py-3 border-b border-black font-mono text-sm uppercase tracking-wider transition-colors ${
                     location.pathname === path
-                      ? 'text-blue-600 bg-blue-50'
-                      : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
+                      ? 'bg-black text-white'
+                      : 'bg-white text-black hover:bg-black hover:text-white'
                   }`}
                 >
-                  <Icon className="h-5 w-5" />
-                  <span>{label}</span>
+                  {label}
                 </Link>
               );
             })}

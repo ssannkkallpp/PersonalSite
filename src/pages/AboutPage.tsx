@@ -1,34 +1,58 @@
 import React from 'react';
-import { Code2 } from 'lucide-react';
 
 const AboutPage = () => {
   return (
-    <div className="pt-20 min-h-screen bg-gradient-to-br from-blue-100/60 via-white to-blue-50 flex items-center justify-center px-4 sm:px-6 lg:px-8">
-      <section className="w-full max-w-4xl lg:max-w-5xl mx-auto p-6 sm:p-8 lg:p-16 xl:p-24 bg-white rounded-2xl lg:rounded-3xl border border-blue-100 shadow-xl lg:shadow-2xl animate-fade-in">
-        <div className="flex flex-col sm:flex-row items-center mb-8 sm:mb-10 lg:mb-14 gap-4 sm:gap-6">
-          <span className="inline-flex items-center justify-center rounded-full bg-blue-50 p-4 sm:p-6 shadow-md">
-            <Code2 className="h-8 w-8 sm:h-12 sm:w-12 lg:h-16 lg:w-16 text-blue-600" />
-          </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 tracking-tight text-center sm:text-left">My Journey</h1>
+    <div className="pt-20 min-h-screen bg-gray-100 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto py-12">
+        <div className="bg-white border-2 border-black p-8 sm:p-12">
+          <div className="text-center mb-12">
+            <div className="bg-black text-white px-4 py-2 inline-block mb-6 font-mono text-sm uppercase tracking-wider">
+              About Me
+            </div>
+            <h1 className="text-3xl sm:text-4xl font-bold font-mono mb-8">MY JOURNEY</h1>
+          </div>
+          
+          <div className="space-y-8 text-black font-mono leading-relaxed">
+            <div className="border-l-4 border-black pl-6">
+              <h2 className="text-xl font-bold mb-4 uppercase">Education & Early Career</h2>
+              <p className="text-lg">
+                Graduated from UMass Amherst in 2022 with a degree in Computer Science. Started my career developing microsegmentation solutions at ColorTokens Inc, working on the XShield platform for OT and Cloud workloads.
+              </p>
+            </div>
+            
+            <div className="border-l-4 border-black pl-6">
+              <h2 className="text-xl font-bold mb-4 uppercase">Current Focus</h2>
+              <p className="text-lg">
+                Currently pursuing a Master's in Computer Science at New York University, focusing on building scalable systems with modern AI engineering techniques.
+              </p>
+            </div>
+            
+            <div className="border-l-4 border-black pl-6">
+              <h2 className="text-xl font-bold mb-4 uppercase">Beyond Code</h2>
+              <p className="text-lg">
+                Passionate NBA fan and Lakers supporter. Interested in sports storytelling and the evolution of modern basketball. I write about the NBA and the art of storytelling in sports media.
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-12 pt-8 border-t-2 border-black text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div className="border border-black p-4">
+                <div className="text-2xl font-bold font-mono">3+</div>
+                <div className="text-sm font-mono uppercase">Years Experience</div>
+              </div>
+              <div className="border border-black p-4">
+                <div className="text-2xl font-bold font-mono">2</div>
+                <div className="text-sm font-mono uppercase">Major Companies</div>
+              </div>
+              <div className="border border-black p-4">
+                <div className="text-2xl font-bold font-mono">NYU</div>
+                <div className="text-sm font-mono uppercase">Current Student</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="space-y-6 sm:space-y-8 lg:space-y-14 text-gray-900 leading-relaxed text-base sm:text-lg lg:text-xl xl:text-2xl font-normal">
-          <p>
-            I graduated from <span className="font-semibold text-blue-700">UMass Amherst</span> in 2022 with a degree in Computer Science. I've since spent three years working in the microsegmentation space developing the <span className="font-semibold text-blue-700">XShield platform</span> at ColorTokens Inc, providing security features for OT and Cloud workloads.
-          </p>
-          <p>
-            Currently, I'm at <span className="font-semibold text-blue-700">New York University</span> pursuing a Master's in Computer Science with a focus on building scalable systems with modern AI engineering techniques.
-          </p>
-        </div>
-      </section>
-      <style>{`
-        .animate-fade-in {
-          animation: fadeIn 1.2s cubic-bezier(0.4,0,0.2,1);
-        }
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(30px); }
-          to { opacity: 1; transform: none; }
-        }
-      `}</style>
+      </div>
     </div>
   );
 };
