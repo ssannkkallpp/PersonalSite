@@ -36,14 +36,14 @@ const Header = () => {
         : 'bg-white/80 backdrop-blur-sm'
     }`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center py-4">
+        <div className="flex items-center justify-between py-4">
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8 ml-auto">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8 ml-auto">
             {navigationItems.map((item) => (
               <Link
                 key={item.label}
                 to={item.path}
-                className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200`}
+                className={`flex items-center space-x-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 px-3 py-2 rounded-lg hover:bg-blue-50`}
               >
                 <item.icon className="h-5 w-5" />
                 <span>{item.label}</span>
@@ -54,7 +54,8 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600"
+            className="md:hidden p-3 rounded-lg text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+            aria-label="Toggle menu"
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -62,7 +63,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white rounded-lg shadow-lg mb-4 p-4 border border-gray-200">
+          <div className="md:hidden bg-white rounded-lg shadow-lg mb-4 p-4 border border-gray-200 animate-in slide-in-from-top-2">
             {navigationItems.map(({ icon: Icon, label, path }) => {
               
               return (
@@ -70,13 +71,13 @@ const Header = () => {
                   key={label}
                   to={path!}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`flex items-center space-x-3 w-full px-3 py-3 rounded-lg transition-colors font-medium ${
+                  className={`flex items-center space-x-3 w-full px-4 py-4 rounded-lg transition-colors font-medium ${
                     location.pathname === path
                       ? 'text-blue-600 bg-blue-50'
                       : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
                   }`}
                 >
-                  <Icon className="h-4 w-4" />
+                  <Icon className="h-5 w-5" />
                   <span>{label}</span>
                 </Link>
               );

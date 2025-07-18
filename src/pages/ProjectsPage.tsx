@@ -28,26 +28,26 @@ const ProjectsPage = () => {
 
   return (
     <div className="pt-20">
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h1>
-            <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Featured Projects</h1>
+            <div className="w-24 h-1 bg-blue-600 mx-auto mb-6 sm:mb-8"></div>
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 font-normal max-w-3xl mx-auto px-4">
               A showcase of my recent work, demonstrating technical expertise and problem-solving abilities.
             </p>
           </div>
 
-          <div className="space-y-16">
+          <div className="space-y-8 sm:space-y-12 lg:space-y-16">
             {projects.map((project, index) => (
               <div
                 key={project.title}
-                className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 hover:shadow-2xl transition-shadow duration-300"
+                className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl overflow-hidden border border-gray-200 hover:shadow-xl sm:hover:shadow-2xl transition-shadow duration-300"
               >
-                <div className="md:flex">
+                <div className="flex flex-col lg:flex-row">
                   {/* Project Image */}
-                  <div className="md:w-1/2">
-                    <div className="relative h-80 md:h-96">
+                  <div className="lg:w-1/2">
+                    <div className="relative h-48 sm:h-64 lg:h-80 xl:h-96">
                       <img
                         src={project.image}
                         alt={project.title}
@@ -58,9 +58,9 @@ const ProjectsPage = () => {
                   </div>
 
                   {/* Project Content */}
-                  <div className="md:w-1/2 p-8">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-4">{project.title}</h2>
-                    <p className="text-gray-600 mb-6">{project.description}</p>
+                  <div className="lg:w-1/2 p-6 sm:p-8">
+                    <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{project.title}</h2>
+                    <p className="text-sm sm:text-base lg:text-lg text-gray-900 font-normal mb-4 sm:mb-6 leading-relaxed">{project.description}</p>
 
                     {/* Project Link */}
                     <div className="flex space-x-4">
@@ -68,9 +68,9 @@ const ProjectsPage = () => {
                         href={project.liveLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                        className="inline-flex items-center px-4 sm:px-5 py-2 sm:py-3 border border-transparent rounded-md shadow-sm text-sm sm:text-lg font-semibold text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
                       >
-                        <ExternalLink className="h-4 w-4 mr-2" />
+                        <ExternalLink className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
                         View Project
                       </a>
                     </div>

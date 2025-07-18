@@ -22,6 +22,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Mobile-first responsive design */
+* {
+  box-sizing: border-box;
+}
+
+/* Improve touch targets on mobile */
+button, a {
+  min-height: 44px;
+  min-width: 44px;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -38,4 +49,24 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(to bottom, #2563eb, #7c3aed);
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 640px) {
+  /* Ensure text is readable on small screens */
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  /* Improve touch targets */
+  button, a {
+    padding: 12px 16px;
+  }
+  
+  /* Better spacing for mobile */
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
