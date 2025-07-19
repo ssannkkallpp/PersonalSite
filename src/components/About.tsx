@@ -56,7 +56,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
           {/* Personal Story */}
           <div className="space-y-6">
-            <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
+            <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200 animate-slide-up">
               <div className="flex items-center mb-6">
                 <Code2 className="h-8 w-8 text-blue-600 mr-3" />
                 <h3 className="text-2xl font-bold text-gray-900">My Journey</h3>

@@ -39,7 +39,10 @@ const ProjectsPage = () => {
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className="bg-white border-2 border-black overflow-hidden"
+              className="bg-white border-2 border-black overflow-hidden animate-slide-down"
+              style={{
+                animationDelay: `${index * 0.2}s`
+              }}
             >
               <div className="flex flex-col lg:flex-row">
                 {/* Project Image */}

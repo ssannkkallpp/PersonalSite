@@ -8,7 +8,6 @@ const Header = () => {
 
   const navigationItems = [
     { icon: Home, label: 'Home', path: '/' },
-    { icon: User, label: 'About', path: '/about' },
     { icon: FolderGit2, label: 'Projects', path: '/projects' }
   ];
 
