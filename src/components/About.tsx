@@ -68,9 +68,16 @@ const About = () => {
                   in the microsegmentation space developing the XShield platform at ColorTokens Inc providing security features for OT and Cloud workloads. 
                 </p>
                 <p>
-                  Currently, I'm at New York University pursuing a Master's in Computer Science with a focus on building scalable systems with modern AI engineering techniques. Outside of work,
-                  I'm a huge fan of the NBA and the Los Angeles Lakers. As a shameless consumer of modern sports media, I have recently taken a strong passion for 
-                  sports storytelling and the art of storytelling in general. I will be posting some of my thoughts on the modern NBA and the evolution of the league through the years. 
+                  Currently, I'm at New York University pursuing a Master's in Computer Science and contributing to the{' '}
+                  <a 
+                    href="https://github.com/Lind-Project/lind-wasm" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 underline font-medium"
+                  >
+                    lind-wasm
+                  </a>{' '}
+                  project at the Secure Systems Lab. 
                 </p>
               </div>
             </div>

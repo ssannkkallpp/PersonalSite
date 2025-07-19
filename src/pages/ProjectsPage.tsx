@@ -3,7 +3,7 @@ import React from 'react';
 const ProjectsPage = () => {
   const projects = [
     {
-      title: 'Chase Game',
+      title: 'Chase',
       description: 'A web-based game to traverse a grid while avoiding an adversarial red dot.',
       image: '/chase-home.png',
       liveLink: 'https://chase-game-self.vercel.app/'
