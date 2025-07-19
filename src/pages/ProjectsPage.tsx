@@ -31,7 +31,7 @@ const ProjectsPage = () => {
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold font-mono mb-6">FEATURED PROJECTS</h1>
           <p className="text-lg font-mono max-w-2xl mx-auto">
-            Selected work demonstrating technical skills and problem-solving approach.
+            Here is some of my work. 
           </p>
         </div>
 
