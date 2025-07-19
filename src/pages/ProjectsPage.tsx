@@ -3,7 +3,7 @@ import React from 'react';
 const ProjectsPage = () => {
   const projects = [
     {
-      title: 'Chase Game',
+      title: 'Chase',
       description: 'A web-based game to traverse a grid while avoiding an adversarial red dot.',
       image: '/chase-home.png',
       liveLink: 'https://chase-game-self.vercel.app/'
@@ -39,7 +39,10 @@ const ProjectsPage = () => {
           {projects.map((project, index) => (
             <div
               key={project.title}
-              className="bg-white border-2 border-black overflow-hidden"
+              className="bg-white border-2 border-black overflow-hidden animate-slide-down"
+              style={{
+                animationDelay: `${index * 0.2}s`
+              }}
             >
               <div className="flex flex-col lg:flex-row">
                 {/* Project Image */}
